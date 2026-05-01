@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<body>
+<button onclick="test()">POST テスト</button>
+
+<script>
+function test() {
+  fetch("https://script.google.com/macros/s/AKfycbxsZke3U34C-ZX_RApjm4Sa4myzOfG8aE_cqIoB6HLegh4_iIfOPMqt6uMyVhbgyTh4/exec", {
+    method: "POST",
+    body: "test"
+  })
+  .then(r => r.text())
+  .then(t => alert("結果: " + t))
+  .catch(e => alert("エラー"));
+}
+</script>
+</body>
+</html>
